@@ -95,7 +95,15 @@ Key ones to set:
 git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR EMAIL ADDRESS"
 git config core.editor notepad                               #this configures notepad for commits.  Can give path of another text editor like sublime
+
+or
+
+git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"    #for configuring sublime or other text editor
+
 git config --global credential.helper wincred                #sets windows to store credentials for pushing to remote repository
+
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
 
 
 12. How do I configure git bash?
@@ -105,3 +113,11 @@ You must add configurations to the .bashrc file in yor home directory (cd ~)
 You can also do this from git bash using something like:
 
 echo 'alias subl="C:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"' >> ~/.bashrc    #this sets subl as an alias to launch sublime_text.exe  by piping it into .bashrc
+
+13.  How do I work with remote repositories such as github?
+
+First you need to add the repository under a name, such as 'origin' with the https or ssh url from your github repository: git remote add [name (origin)] [url]
+Then, you need to push or local content on a given [branch] to that repsitory: git push [name] [branch]
+If you make changes on github or someelse commits changes, you can pull that into your local using:  git pull [name] [branch-on-remote]
+
+Note: the first time you access a new remote you will have to put in your username and password.  If you want windows to save this information, you need to configure it: git config --global credential.helper wincred
