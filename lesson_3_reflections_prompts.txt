@@ -1,5 +1,5 @@
 
-Something  here.
+Something  here.  Something else here.
 
 
 New Git Commands - Lesson 3:
