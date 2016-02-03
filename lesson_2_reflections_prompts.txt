@@ -1,0 +1,17 @@
+
+
+1. What happens when you initialize a repository? Why do you need to do it?
+
+a hidden .git directory is created for tracking all your committ changes, but nothing is commited.  You need to initialize the directory to let git know that you are going to track infromation within it. once you start making commits, git will add them to the .git directory.
+
+2. How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+Staging area contains a list of files that will be commited next.  By contrast, the working directory has teh current versions of those files and the repository has all versions of the files that have been commited.  Having a staging area allows the user to determine what files they want to add to a commit.  This makes it possible to commit files based on logcial changes.
+
+More Git Commands:
+
+- git init               : creates a new git repository for currents of directory
+- git status             : shows current status of git repository, including what files have changed
+- git add [filename]     : adds file to staging area for commits
+- git commit             : commits the files in staging area to the repository
+    -m "message"         : adds commit message in command line instead of opening text editor
