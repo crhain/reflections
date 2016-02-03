@@ -12,18 +12,51 @@ Staging area contains a list of files that will be commited next.  By contrast, 
 
 Staging area can be used to hold only files with changes that relate to the logical change.  Once they are commited, you can stage new files for another logical change.
 
+4. What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Branches would be useful for trying out major feature changes that you are playing around with or for departures on the main project--for instance, alternate language versions.
+
+Branches can also be used to organize large projects, especially if they are public.  You can have a branch (master) for your production quality code, a branch for working code, and branches for experimental versions
+
+Finally, branches can be used to mange public projects with multiple coders.  Each new feature or bug fix that a coder is working on can have it's own branch.  This ensures that the coder is always working on their own code without worrying about changes that others have introduced.   These changes can then be merged into the main project by the project owner.
+
+5. How do the diagrams help you visualize the branch structure?
+
+They give a visual representation of where one branch seperates from another.  They also show that every commit is a child of the previous commit within a branch.
+
+6. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+Merging two branches together adds togther all lines that are unique to each branch and also adds in lines that are present in either branch but not present in the original file. We show the merge commit branching from both end points of the merged branches because the merged branch commit will have both of those end points as parents.
+
+7. What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Git automatic merging handles most common merges where the comparison between files can be handled by a simple algorithim.  It is easier and less error prone for the computer to do this.  Manual merges are really only needed in those cases where the algorithim is not smart enough to determine what should be included and what shouldn't.  In that case, git marks the conflicts in the files and lets the humans decide how to handel the merge.
+
+
 More Git Commands:
 
-- git init               : creates a new git repository for currents of directory
-- git status             : shows current status of git repository, including what files have changed
-- git add [filename]     : adds file to staging area for commits
-- git commit             : commits the files in staging area to the repository
-    -m "message"         : adds commit message in command line instead of opening text editor
-- git reset --hard       : discards changes in the working directory and staging area, reseting it to most recent versions in the repository!!!!  (only do this if you have committed everything you want to keep)
+- git init               			: creates a new git repository for currents of directory
+- git status             			: shows current status of git repository, including what files have changed
+- git add [filename]     			: adds file to staging area for commits
+- git commit             			: commits the files in staging area to the repository
+    -m "message"         			: adds commit message in command line instead of opening text editor    
+- git reset --hard       			: discards changes in the working directory and staging area, reseting it to most recent versions in the repository!!!!  (only do this if you have committed everything you want to keep)
+
+- git branch             			: shows existing branches ('master' is the defualt)
+- git branch [name]      			: creates a new branch with [name] as it's label
+- git branch -d [name]				: deletes the label for a given branch.  If the branch was not merged into another branch, it will orphan all commits for that branch
+- git show [commit_id]   			: shows the difference between a commit and it's parent
+- git merge [branch1] [branch2]		: merges branch 1 with branch 2.  If 3rd branch is currently checked, that will also be merged in.  Will merge other branches into branch currently checked out  
+- git merge --abort                 : resets a merge.  Use this when you get a merge error and want to return files to state before merge.   
 
 
 Git Commmands from Lesson 1 with Additions:
 
-- git diff               : without arguments this command will show differences between files in working directory and staging area
-    --staged             : this argument will show differences between staging area and most recently commited files in repository 
-- git checkout master    : resets working directory to most recent commit in repository.  Run this if you have checked out earlier files and want to reset to most recent.
+- git diff               				: without arguments this command will show differences between files in working directory and staging area
+    --staged             				: this argument will show differences between staging area and most recently commited files in repository 
+- git checkout master    				: resets working directory to most recent commit in repository.  Run this if you have checked out earlier files and want to reset to most recent.
+- git checkout [branch name] 			: checks out the files in [branch name] and makes that the current branch when making commits.  The other branches will be left alone.
+- git checkout -b [branch name]         : creates a bew brabcg as with git branch command and then checks it out.  Nice shorthand so you don't have to type two commands to create a new branch
+- git log --graph [branch1] [branch2]	: shows a graph of commits relating [branch2] to [branch1]
+- git log --oneline                     : compacts log info on one line
+- git log -n #							: shows only # of commits.  So git log -n 1 will only show 1 commit
