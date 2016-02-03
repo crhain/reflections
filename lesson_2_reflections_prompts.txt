@@ -8,6 +8,10 @@ a hidden .git directory is created for tracking all your committ changes, but no
 
 Staging area contains a list of files that will be commited next.  By contrast, the working directory has teh current versions of those files and the repository has all versions of the files that have been commited.  Having a staging area allows the user to determine what files they want to add to a commit.  This makes it possible to commit files based on logcial changes.
 
+3. How can you use the staging area to make sure you have one commit per logical change?
+
+Staging area can be used to hold only files with changes that relate to the logical change.  Once they are commited, you can stage new files for another logical change.
+
 More Git Commands:
 
 - git init               : creates a new git repository for currents of directory
@@ -15,3 +19,11 @@ More Git Commands:
 - git add [filename]     : adds file to staging area for commits
 - git commit             : commits the files in staging area to the repository
     -m "message"         : adds commit message in command line instead of opening text editor
+- git reset --hard       : discards changes in the working directory and staging area, reseting it to most recent versions in the repository!!!!  (only do this if you have committed everything you want to keep)
+
+
+Git Commmands from Lesson 1 with Additions:
+
+- git diff               : without arguments this command will show differences between files in working directory and staging area
+    --staged             : this argument will show differences between staging area and most recently commited files in repository 
+- git checkout master    : resets working directory to most recent commit in repository.  Run this if you have checked out earlier files and want to reset to most recent.
