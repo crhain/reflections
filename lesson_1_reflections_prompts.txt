@@ -1,0 +1,36 @@
+1. How could having access to previous versions of a file make a programmer more efficent?
+
+- It would be easier to try out new things and then easily revert to an older veresion if there are problems with those changes
+- It would be easier to discover bugs that have appeared in recent versions by comparing with older versions
+- It makes it easier for multiple people to work on the same project.  Each different version would have its own file and if there are problems, the project administrator can revert to a version before those changes were added.
+
+
+2. What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+ + you can create commits that make logical sense and actually capture relevant changes
+ + you can can cut down on the total number of commits you make
+ - you can easily forget to make an important commit or not make enough commits to capture actual changes
+
+
+3. Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+version control systems for programs often involve many interdependent files, while version control for documents usually are not interdependent.
+
+4. How can you use the commands git log and git diff to view the history of files?
+
+git log  shows a history of all file committs and git diff shows changes between two different versions of a file.  You can look up the different versions of the file using git log and then compare them using git diff to see what changes were made.
+
+5. How might using version control make you more confident to make changes that could break something?
+
+Version control allows you to easily revert to older versions and to also compare changes between versions to track bugs.
+
+
+
+LIST OF GIT COMMANDS SO FAR
+
+git version               : shows current version of git installed
+git clone [url]           : clones repository from url into new directory at current location
+git log                   : shows file change history for repository
+git diff [original] [new] : shows changes between two versions of a file with the second one being the new one.  Use id from log output (can be just first 5-6 chars)
+git checkout [id]         : copies files from that version into current directory
+
