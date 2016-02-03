@@ -83,3 +83,25 @@ git diff --staged
 
 git show [commit_id]
 
+
+11. How do I configure git?
+
+git configure    #is the basic configuration command.  Typing this will bring up help for congfigure.
+
+git configure -l  #shows all current configurations
+
+Key ones to set:
+
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL ADDRESS"
+git config core.editor notepad                               #this configures notepad for commits.  Can give path of another text editor like sublime
+git config --global credential.helper wincred                #sets windows to store credentials for pushing to remote repository
+
+
+12. How do I configure git bash?
+
+You must add configurations to the .bashrc file in yor home directory (cd ~)
+
+You can also do this from git bash using something like:
+
+echo 'alias subl="C:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"' >> ~/.bashrc    #this sets subl as an alias to launch sublime_text.exe  by piping it into .bashrc
