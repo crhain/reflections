@@ -3,22 +3,26 @@
 git init
 
 
-2. How do I commit files to the repository?
+2. How do I clone an existing project?
+
+git clone [url]
+
+3. How do I commit files to the repository?
 
 git add [file]     #for every file that you want to commit.  Must add to staging area first.
 git commit         #once all the files you want to commit are in the staging area.  can also do git commit -m 'message  here' if you don't want to use text editor to add message
 
 
-3. How do I get at previous commits if I want to work with them?
+4. How do I get at previous commits if I want to work with them?
 
 git checkout [commit id or branch label]
 
-4. How do I reset the current working directory to the most recent commit?
+5. How do I reset the current working directory to the most recent commit?
 
 git checkout master   #checks out branch labeled master.  can also checkout other branches you have created
 
 
-5. How do I fork/branch my code?  
+6. How do I fork/branch my code?  
 
 git branch [branch_name]    #to create a new label for the branch.  can also check out which branches you have with git branch
 git checkout [new_branch_name]   #to give current working directory the new branch lable
@@ -29,7 +33,7 @@ git checkout -b [branch_name]   #creates branch label and assigns it to current 
 
 
 
-6. How do I merge two branches?
+7. How do I merge two branches?
 
 First, you need to make sure you are working with the branch into which you want to merge the other branch.
 	git checkout [merge_to_branch]
@@ -46,11 +50,11 @@ If you want to abort a merge with conflicts
 	git merge --abort
 
 
-7. What if I want to see what files are staged, what files commited, what files with changes not commited?
+8. What if I want to see what files are staged, what files commited, what files with changes not commited?
 
 git status
 
-8. What if I want to see a history of all commits?
+9. What if I want to see a history of all commits?
 
 git log
 
@@ -63,19 +67,19 @@ or
 git log --oneline --graph [branch1] [branch2]
 
 
-9. What if I want to compare differences between two commits?
+10. What if I want to compare differences between two commits?
 
 git diff [commit_id_previous] [commit_id_recent]
 
-10. What if I want to compare differences between working files and staged files?
+10a. What if I want to compare differences between working files and staged files?
 
 git diff
 
-11. What if I want to compare differences between staged files and most recent commit?
+10b. What if I want to compare differences between staged files and most recent commit?
 
 git diff --staged
 
-12. What if I want to compare differences between a commit and it's parent?
+10c. What if I want to compare differences between a commit and it's parent?
 
 git show [commit_id]
 
