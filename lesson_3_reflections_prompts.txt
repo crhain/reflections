@@ -7,6 +7,10 @@ For a few reasons:
 - for safety
 - to share your work with others
 
+2. Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+If the local repository was automatically updated to match the remote, there is the possiblity that a change on the remote that you didn't want would overwrite your local repository.
+
 
 New Git Commands - Lesson 3:
 
@@ -14,3 +18,4 @@ New Git Commands - Lesson 3:
 * git remote -v								: same as git remote but with more information(i.e. verbose)    
 * git remote add [name (origin)] [url]   	: adds a remote using name.  Usually if the project only has one remote it is called 'origin'.  [url] refers to the url where the repository will be located (usually on github)
 * git push [remote_name] [branch_name]		: pushes [branch_name] from local repository to [remote_name]
+* git pull [remote_name] [branch_name]      : pulls [branch_name]  from the remote into the local repository.  This updates whatever was in the repository.
