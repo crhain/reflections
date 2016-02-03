@@ -1,5 +1,11 @@
 
-Something  here.  Something else here.
+1. When would you want to use a remote repository rather than keeping all your work local?
+
+For a few reasons:
+- projects with multiple contributors
+- when you are working on multiple machines and need to keep project files up to date
+- for safety
+- to share your work with others
 
 
 New Git Commands - Lesson 3:
