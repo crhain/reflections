@@ -1,0 +1,8 @@
+
+
+New Git Commands - Lesson 3:
+
+* git remote								: shows existing remote repositories for project
+* git remote -v								: same as git remote but with more information(i.e. verbose)    
+* git remote add [name (origin)] [url]   	: adds a remote using name.  Usually if the project only has one remote it is called 'origin'.  [url] refers to the url where the repository will be located (usually on github)
+* git push [remote_name] [branch_name]		: pushes [branch_name] from local repository to [remote_name]
