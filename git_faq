@@ -22,7 +22,7 @@ git checkout [commit id or branch label]
 git checkout master   #checks out branch labeled master.  can also checkout other branches you have created
 
 
-6. How do I fork/branch my code?  
+6. How do I branch my code?  
 
 git branch [branch_name]    #to create a new label for the branch.  can also check out which branches you have with git branch
 git checkout [new_branch_name]   #to give current working directory the new branch lable
