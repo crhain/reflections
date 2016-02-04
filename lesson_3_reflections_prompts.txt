@@ -11,6 +11,14 @@ For a few reasons:
 
 If the local repository was automatically updated to match the remote, there is the possiblity that a change on the remote that you didn't want would overwrite your local repository.
 
+3. Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+Forks: are made on GitHub website.  They make a copy of an existing project and are used for creating variations on existing projects without effecting the original project
+
+Clones: are copies pulled from online repositories to local machines.  You can also clone from one directory to another.  You use clones when you want to create your own seperate version of a project or to pull from an online fork of another project.
+
+Branches: are alternate versions of a project.  They can be used to try out new features, fix bugs, or any other purpose where a new (possibly temporary) version of the project is needed.
+
 
 New Git Commands - Lesson 3:
 
@@ -19,3 +27,6 @@ New Git Commands - Lesson 3:
 * git remote add [name (origin)] [url]   	: adds a remote using name.  Usually if the project only has one remote it is called 'origin'.  [url] refers to the url where the repository will be located (usually on github)
 * git push [remote_name] [branch_name]		: pushes [branch_name] from local repository to [remote_name]
 * git pull [remote_name] [branch_name]      : pulls [branch_name]  from the remote into the local repository.  This updates whatever was in the repository.
+* git fetch [remote_name (origin)] 			:  will update the origin/master branch but not the master branch
+                                               useufl for when you have different changes to the same file on local and remote.  can then do a comparison with something like git diff origin/master master before creating a merge
+                                               
