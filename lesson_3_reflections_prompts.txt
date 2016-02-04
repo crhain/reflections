@@ -23,6 +23,10 @@ Branches: are alternate versions of a project.  They can be used to try out new 
 
 It allows git to compare the state of the local master to the state of the remote when it was last pulled.  This makes it possible to see if the master has gotten ahead and can be used for comparing changes between remote, local, and last time remote was pulled into local.  For instance, when pulling files from the remote after differing changes have been made to the same file on both remote and local.
 
+5. How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+I would probably used a cloud storage service such as google, onedrive, or dropbox to share files.  It would be easier for people to learn how to use, but it would be much harder to manage different versions of docs.  The best method would be to have one person in charge of making official updates and then have people put their proposed changes in their own working diretories.  This would get very complicated to manage for large, complex projects, even though getting started would be easier.
+
 
 New Git Commands - Lesson 3:
 
