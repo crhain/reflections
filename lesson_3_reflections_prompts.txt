@@ -31,6 +31,8 @@ I would probably used a cloud storage service such as google, onedrive, or dropb
 
 If you are making significant changes, you might want to use a seperate branch.  So you wouldn't use branches for core features and standard bug fixes, but you would use them for major rewrites, major bug fixes, and non-core features or experimental features.
 
+* You can also use branches when making changes to a public project so that you can keep your master up to date with main project and then use the branch for pull requests.
+
 
 7. When do you use pull requests on GitHub?
 pull requests are made when you want to propose changes to the master repository (or the main repository of a fork).  The owner of the repository can view your pull request, make comments, and then accept the request, merging your branch into the master.
